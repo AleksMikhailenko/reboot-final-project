@@ -45,7 +45,7 @@ class ATMTest {
                 .emptyCardSlot(true)
                 .build();
 
-        atm.insertCard(rubCard);
+        atm.retrieveCard(rubCard);
 
         assertEquals(rubCard, atm.getCard());
     }
@@ -57,7 +57,7 @@ class ATMTest {
                 .emptyCardSlot(true)
                 .build();
 
-        atm.insertCard(rubCard);
+        atm.retrieveCard(rubCard);
 
         assertFalse(atm.isEmptyCardSlot());
     }
@@ -68,7 +68,7 @@ class ATMTest {
                 .id(1L)
                 .build();
 
-        assertThrows(IllegalArgumentException.class, () -> atm.insertCard(rubCard));
+        assertThrows(IllegalArgumentException.class, () -> atm.retrieveCard(rubCard));
     }
 
     @Test
@@ -79,7 +79,7 @@ class ATMTest {
                 .card(rubCard)
                 .build();
 
-        assertThrows(IllegalArgumentException.class, () -> atm.insertCard(rubCard));
+        assertThrows(IllegalArgumentException.class, () -> atm.retrieveCard(rubCard));
     }
 
     // check secure code
@@ -91,7 +91,7 @@ class ATMTest {
                 .emptyCardSlot(true)
                 .build();
 
-        atm.insertCard(rubCard);
+        atm.retrieveCard(rubCard);
 
         assertTrue(atm.checkSecureCode(rubCard.getSecureCode()));
     }
@@ -104,7 +104,7 @@ class ATMTest {
                 .emptyCardSlot(true)
                 .build();
 
-        atm.insertCard(usdCard);
+        atm.retrieveCard(usdCard);
 
         assertEquals(usdCard.getBalance(), atm.retrieveCardBalance());
     }
@@ -118,7 +118,7 @@ class ATMTest {
                 .emptyCardSlot(true)
                 .build();
 
-        atm.insertCard(usdCard);
+        atm.retrieveCard(usdCard);
 
         assertEquals(usdCard, atm.returnCard());
     }
@@ -131,7 +131,7 @@ class ATMTest {
                 .emptyCardSlot(true)
                 .build();
 
-        atm.insertCard(usdCard);
+        atm.retrieveCard(usdCard);
         atm.returnCard();
 
         assertTrue(atm.isEmptyCardSlot());

@@ -25,7 +25,7 @@ public class ATM {
      */
     private Card card;
 
-    public void insertCard(Card card) {
+    public void retrieveCard(Card card) {
         Objects.requireNonNull(card);
         if (this.card != null || !this.emptyCardSlot) {
             // todo: заменить на бизнес-исключение
