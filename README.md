@@ -1,16 +1,13 @@
 # Reboot School Java Developer Final Project
 
----
 
 [![build](https://img.shields.io/github/workflow/status/AleksMikhailenko/reboot-final-project/Java%20CI%20with%20Maven/develop)](https://github.com/AleksMikhailenko/reboot-final-project/actions?query=branch%3Adevelop++workflow%3A%22Java+CI+with+Maven%22++)
 [![codecov](https://codecov.io/gh/AleksMikhailenko/reboot-final-project/branch/develop/graph/badge.svg?token=L15NL1GRUB)](https://codecov.io/gh/AleksMikhailenko/reboot-final-project)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_reboot-final-project&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=AleksMikhailenko_reboot-final-project)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_reboot-final-project&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=AleksMikhailenko_reboot-final-project)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_reboot-final-project&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=AleksMikhailenko_reboot-final-project)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_reboot-final-project&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=AleksMikhailenko_reboot-final-project)
 
-[comment]: <> ([![Reliability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=reliability_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-[comment]: <> ([![Security Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=security_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-[comment]: <> ([![Maintainability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=sqale_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-[comment]: <> ([![Duplicated Lines &#40;%&#41;]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=duplicated_lines_density&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-
----
 
 ## Модель получения клиентом баланса на банкомате
 
