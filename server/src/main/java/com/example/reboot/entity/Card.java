@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class Card {
 
     /**
-     * Card identifier
+     * Идентификатор карты
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,38 +27,38 @@ public class Card {
     Long id;
 
     /**
-     * Card number
+     * Номер карты
      */
     @Column(name = "number")
     String number;
 
     /**
-     * Card balance
+     * Баланс
      */
     @Column(name = "balance")
     BigDecimal balance;
 
     /**
-     * Card currency
+     * Валюта
      */
     @Column(name = "currency")
     @Enumerated(EnumType.STRING)
     Currency currency;
 
     /**
-     * Card pin-code
+     * Пин-код
      */
     @Column(name = "pin")
     String pin;
 
     /**
-     * Card start date
+     * Дата начала действия карты
      */
     @Column(name = "start_date")
     LocalDate startDate;
 
     /**
-     * Card end date
+     * Дата окончания действия карты
      */
     @Column(name = "end_date")
     LocalDate endDate;

@@ -21,7 +21,7 @@ import java.time.Month;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @TestPropertySource("classpath:application.yml")
@@ -35,11 +35,12 @@ class AtmServiceTest {
     Environment env;
 
     AtmService atmService;
-    String URL = "http://localhost:9090/api/v1.0/cards";
+    String url;
 
     @BeforeEach
     void setup() {
         atmService = new AtmServiceImpl(restTemplate, env);
+        url = env.getProperty("atm.server.url", "http://localhost:9090/api/v1.0/cards");
     }
 
     @Test
@@ -73,7 +74,7 @@ class AtmServiceTest {
                 .build();
 
         // when
-        when(restTemplate.postForObject(env.getProperty("atm.server.url", URL), rq, InfoByCardRs.class))
+        when(restTemplate.postForObject(url, rq, InfoByCardRs.class))
                 .thenReturn(rs);
 
         // then
@@ -106,7 +107,7 @@ class AtmServiceTest {
                 .build();
 
         // when
-        when(restTemplate.postForObject(env.getProperty("atm.server.url", URL), rq, InfoByCardRs.class))
+        when(restTemplate.postForObject(url, rq, InfoByCardRs.class))
                 .thenReturn(rs);
 
         // then
@@ -122,7 +123,7 @@ class AtmServiceTest {
                 .build();
 
         // when
-        when(restTemplate.postForObject(env.getProperty("atm.server.url", URL), rq, InfoByCardRs.class))
+        when(restTemplate.postForObject(url, rq, InfoByCardRs.class))
                 .thenReturn(null);
 
         // then

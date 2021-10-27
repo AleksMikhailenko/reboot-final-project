@@ -8,17 +8,12 @@ import lombok.Getter;
 public class ATM {
 
     /**
-     * Identifier ATM
+     * Идентификатор банкомата
      */
     private long id;
 
     /**
-     * Parameter showing that the card is in the ATM
-     */
-    private boolean emptyCardSlot;
-
-    /**
-     * The card inside the ATM
+     * Вставленная карта в банкомат
      */
     private Card card;
 }

@@ -11,17 +11,17 @@ import java.math.BigDecimal;
 public class Card {
 
     /**
-     * Card number
+     * Номер карты
      */
     String number;
 
     /**
-     * Card balance
+     * Баланс карты
      */
     BigDecimal balance;
 
     /**
-     * Card currency
+     * Валюта карты
      */
     Currency currency;
 }

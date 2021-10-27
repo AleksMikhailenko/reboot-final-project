@@ -6,11 +6,8 @@
 [![codecov](https://codecov.io/gh/AleksMikhailenko/reboot-final-project/branch/develop/graph/badge.svg?token=L15NL1GRUB)](https://codecov.io/gh/AleksMikhailenko/reboot-final-project)
 
 [comment]: <> ([![Reliability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=reliability_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-
 [comment]: <> ([![Security Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=security_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-
 [comment]: <> ([![Maintainability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=sqale_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
-
 [comment]: <> ([![Duplicated Lines &#40;%&#41;]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=duplicated_lines_density&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
 
 ---

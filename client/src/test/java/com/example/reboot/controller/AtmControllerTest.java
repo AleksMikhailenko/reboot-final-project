@@ -1,9 +1,7 @@
 package com.example.reboot.controller;
 
 import com.example.reboot.dto.BalanceDTO;
-import com.example.reboot.dto.CardDTO;
 import com.example.reboot.dto.InfoByCardRq;
-import com.example.reboot.dto.Status;
 import com.example.reboot.enums.Currency;
 import com.example.reboot.service.AtmService;
 import lombok.SneakyThrows;
@@ -16,10 +14,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.Month;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -38,6 +34,7 @@ class AtmControllerTest {
     @Test
     void shouldBeCorrectlyStructuredResponseBySrvGetInfoByCardTest() {
         // given
+        String message = String.format("Баланс по карте на %s", LocalDate.now());
         String rawRq = "{\"cardNumber\":\"1111222233331111\",\"pin\":\"1234\"}";
         InfoByCardRq rq = InfoByCardRq.builder()
                 .cardNumber("1111222233331111")
@@ -45,6 +42,9 @@ class AtmControllerTest {
                 .build();
 
         BalanceDTO rs = BalanceDTO.builder()
+                .balance(BigDecimal.valueOf(134900.4))
+                .currency(Currency.RUB)
+                .message(message)
                 .build();
 
         // when
@@ -55,13 +55,9 @@ class AtmControllerTest {
                         .characterEncoding("UTF_8")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(rawRq))
-                .andExpect(status().isOk());
-//                .andExpect(jsonPath("$.status.statusCode", is(0)))
-//                .andExpect(jsonPath("$.status.statusDesc", is("Карта успешно найдена")))
-//                .andExpect(jsonPath("$.card.number", is("1111222233331111")))
-//                .andExpect(jsonPath("$.card.balance", is(134900.4)))
-//                .andExpect(jsonPath("$.card.currency", is("RUB")))
-//                .andExpect(jsonPath("$.card.startDate", is("2021-09-15")))
-//                .andExpect(jsonPath("$.card.endDate", is("2024-09-15")));
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.balance", is(134900.4)))
+                .andExpect(jsonPath("$.currency", is("RUB")))
+                .andExpect(jsonPath("$.message", is(message)));
     }
 }

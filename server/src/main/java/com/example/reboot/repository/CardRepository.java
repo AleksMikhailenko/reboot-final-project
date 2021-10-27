@@ -9,5 +9,11 @@ import java.util.Optional;
 @Repository
 public interface CardRepository extends CrudRepository<Card, Long> {
 
+    /**
+     * Поиск карты по номеру.
+     *
+     * @param number номер карты
+     * @return объект типа {@link Card} обернутый в {@link Optional}
+     */
     Optional<Card> findCardByNumber(String number);
 }
