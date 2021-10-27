@@ -1,4 +1,4 @@
-package com.example.reboot.dto;
+package com.example.reboot.model;
 
 import lombok.Builder;
 import lombok.Getter;

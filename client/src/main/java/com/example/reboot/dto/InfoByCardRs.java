@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class InfoByCard {
+public class InfoByCardRs {
 
     Status status;
     CardDTO card;

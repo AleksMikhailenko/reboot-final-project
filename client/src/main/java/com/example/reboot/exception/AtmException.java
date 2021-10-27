@@ -4,23 +4,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-public class ATMException extends RuntimeException {
-    public ATMException() {
+public class AtmException extends RuntimeException {
+    public AtmException() {
     }
 
-    public ATMException(String message) {
+    public AtmException(String message) {
         super(message);
     }
 
-    public ATMException(String message, Throwable cause) {
+    public AtmException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public ATMException(Throwable cause) {
+    public AtmException(Throwable cause) {
         super(cause);
     }
 
-    public ATMException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public AtmException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }

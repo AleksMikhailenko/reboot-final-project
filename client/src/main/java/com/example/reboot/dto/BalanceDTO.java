@@ -8,20 +8,9 @@ import java.math.BigDecimal;
 
 @Value
 @Builder
-public class Card {
+public class BalanceDTO {
 
-    /**
-     * Card number
-     */
-    String number;
-
-    /**
-     * Card balance
-     */
     BigDecimal balance;
-
-    /**
-     * Card currency
-     */
     Currency currency;
+    String message;
 }

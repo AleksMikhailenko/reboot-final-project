@@ -1,4 +1,3 @@
 atm:
   server:
-    host: localhost
-    port: 9090
+    url: "http://localhost:9090/api/v1.0/cards"

@@ -5,11 +5,15 @@ import com.example.reboot.entity.Card;
 import com.example.reboot.mapping.Converter;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 @Component
 public class CardToCardDTOConverter implements Converter<Card, CardDTO> {
 
     @Override
     public CardDTO convert(Card source) {
+        Objects.requireNonNull(source);
+
         return CardDTO.builder()
                 .number(source.getNumber())
                 .balance(source.getBalance())
