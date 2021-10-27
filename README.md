@@ -3,7 +3,7 @@
 ---
 
 [![build](https://img.shields.io/github/workflow/status/AleksMikhailenko/reboot-final-project/Java%20CI%20with%20Maven/develop)](https://github.com/AleksMikhailenko/reboot-final-project/actions?query=branch%3Adevelop++workflow%3A%22Java+CI+with+Maven%22++)
-[![codecov](https://codecov.io/gh/AleksMikhailenko/reboot-final-project/branch/develop/graph/badge.svg)](https://codecov.io/gh/AleksMikhailenko/reboot-final-project)
+[![codecov](https://codecov.io/gh/AleksMikhailenko/reboot-final-project/branch/develop/graph/badge.svg?token=L15NL1GRUB)](https://codecov.io/gh/AleksMikhailenko/reboot-final-project)
 
 [comment]: <> ([![Reliability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=AleksMikhailenko_home-work&metric=reliability_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=AleksMikhailenko_home-work&#41;)
 
