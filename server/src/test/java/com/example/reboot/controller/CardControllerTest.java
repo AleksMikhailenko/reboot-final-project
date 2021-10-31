@@ -20,6 +20,7 @@ import java.time.Month;
 
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.when;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -73,7 +74,8 @@ class CardControllerTest {
                         .characterEncoding("UTF_8")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(rawRq)
-                        .with(httpBasic(username, password)))
+                        .with(httpBasic(username, password))
+                        .with(csrf()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.status.statusCode", is(0)))
                 .andExpect(jsonPath("$.status.statusDesc", is("Карта успешно найдена")))
@@ -96,7 +98,8 @@ class CardControllerTest {
                         .characterEncoding("UTF_8")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(rawRq)
-                        .with(httpBasic(username, password)))
+                        .with(httpBasic(username, password))
+                        .with(csrf()))
                 .andExpect(status().isUnauthorized());
     }
 
@@ -108,7 +111,8 @@ class CardControllerTest {
 
         // then
         mockMvc.perform(get("/api/v1.0/cards")
-                        .with(httpBasic(username, password)))
+                        .with(httpBasic(username, password))
+                        .with(csrf()))
                 .andExpect(status().isMethodNotAllowed());
     }
 }
