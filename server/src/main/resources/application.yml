@@ -19,10 +19,6 @@ spring:
 server:
   port: 9090
 
-security:
-  enable:
-    csrf: false
-
 #logging:
 #  level:
 #    root: WARN

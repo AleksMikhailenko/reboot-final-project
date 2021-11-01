@@ -8,10 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.core.env.Environment;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,7 +20,7 @@ import java.time.Month;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @TestPropertySource("classpath:application.yml")
@@ -31,16 +30,14 @@ class AtmServiceTest {
     @MockBean
     RestTemplate restTemplate;
 
-    @Autowired
-    Environment env;
-
     AtmService atmService;
+
+    @Value("${atm.server.url}")
     String url;
 
     @BeforeEach
     void setup() {
-        atmService = new AtmServiceImpl(restTemplate, env);
-        url = env.getProperty("atm.server.url", "http://localhost:9090/api/v1.0/cards");
+        atmService = new AtmServiceImpl(url, restTemplate);
     }
 
     @Test
