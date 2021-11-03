@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS cards;
+
+CREATE TABLE cards (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  number VARCHAR,
+  balance DECIMAL,
+  currency VARCHAR,
+  pin VARCHAR NOT NULL,
+  start_date DATE,
+  end_date DATE
+);
+
+INSERT INTO cards (number, balance, currency, pin, start_date, end_date) VALUES
+  ('1111222233331111', 134900.4, 'RUB', '1234', '2021-09-15', '2024-09-15'),
+  ('1111222233332222', 13900, 'USD', '4444', '2020-12-04', '2023-12-04'),
+  ('1111222233333333', 500.11, 'RUB', '0000', '2021-05-01', '2024-05-01'),
+  ('1111222233334444', 5567000, 'RUB', '5243', '2019-07-10', '2022-07-10'),
+  ('1111222233335555', 78, 'RUB', '9988', '2021-03-29', '2024-03-29');
